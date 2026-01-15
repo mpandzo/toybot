@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyRobot.Core", "ToyRobot.Core\ToyRobot.Core.csproj", "{1FB81DCC-101A-4F00-8E66-439986DED6DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyRobot.Core.Tests", "ToyRobot.Core.Tests\ToyRobot.Core.Tests.csproj", "{343E03A8-EAF1-4888-9472-CE36B7E9CAD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyRobot.ConsoleApp", "ToyRobot.ConsoleApp\ToyRobot.ConsoleApp.csproj", "{BE745613-498C-4350-81ED-E9DA17EFA1C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FB81DCC-101A-4F00-8E66-439986DED6DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FB81DCC-101A-4F00-8E66-439986DED6DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FB81DCC-101A-4F00-8E66-439986DED6DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FB81DCC-101A-4F00-8E66-439986DED6DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{343E03A8-EAF1-4888-9472-CE36B7E9CAD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{343E03A8-EAF1-4888-9472-CE36B7E9CAD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{343E03A8-EAF1-4888-9472-CE36B7E9CAD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{343E03A8-EAF1-4888-9472-CE36B7E9CAD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE745613-498C-4350-81ED-E9DA17EFA1C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE745613-498C-4350-81ED-E9DA17EFA1C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE745613-498C-4350-81ED-E9DA17EFA1C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE745613-498C-4350-81ED-E9DA17EFA1C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

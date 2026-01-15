@@ -6,6 +6,7 @@ public sealed class Tabletop
     public int MaxX { get; }
     public int MinY { get; }
     public int MaxY { get; }
+    
     public Tabletop(int width = 6, int height = 6)
     {
         if (width <= 0) throw new ArgumentOutOfRangeException(nameof(width));

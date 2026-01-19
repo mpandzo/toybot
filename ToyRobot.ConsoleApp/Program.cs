@@ -8,7 +8,7 @@ internal static class Program
     {
         PrintGreeting();
 
-        var tabletop = new Tabletop(6, 6);
+        var tabletop = new Tabletop(8, 8);
         var robot = new Robot(tabletop);
 
         while (true)
@@ -37,6 +37,12 @@ internal static class Program
                 continue;
             }
 
+            if (command.StartsWith("AVOID"))
+            {
+                HandleAvoid(robot, line);
+                continue;
+            }
+
             switch (command)
             {
                 case "MOVE":
@@ -62,6 +68,37 @@ internal static class Program
                     break;
             }
         }
+    }
+
+    private static void HandleAvoid(Robot robot, string input)
+    {
+        // Expected formats:
+        // AVOID 1,2
+
+        var args = input[5..].Trim();        
+        if (args.Length == 0)
+        {
+            Console.WriteLine("Invalid arguments");
+            return;
+        }
+
+        var parts = args.Split(",", StringSplitOptions.TrimEntries);
+        if (parts.Length != 2)
+        {
+            Console.WriteLine("Invalid arguments");
+            return;
+        }
+
+        if (!int.TryParse(parts[0], out int x) ||
+            !int.TryParse(parts[1], out int y))
+        {
+            Console.WriteLine("Invalid arguments");
+            return;
+        }
+
+        var position = new Position(x, y);
+
+        robot.TryAvoid(position);
     }
 
     private static void HandlePlace(Robot robot, string input)
@@ -95,7 +132,7 @@ internal static class Program
 
         if (parts.Length == 3)
         {
-            if (!Enum.TryParse<Direction>(parts[2], true, out var direction))
+            if (!Enum.TryParse<Direction>(parts[2].Replace(" ", "_"), true, out var direction))
             {
                 Console.WriteLine("Invalid command");
                 return;
